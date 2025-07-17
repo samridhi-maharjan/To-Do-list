@@ -64,8 +64,6 @@ Task 'Buy groceries' added to the list.
    <img width="350" height="300" alt="image" src="https://github.com/user-attachments/assets/b6c1f24d-df7c-434c-8cfd-1a8e15942fb8" />
    
    
-   <img width="500" height="232" alt="image" src="https://github.com/user-attachments/assets/7362616f-af07-4ea4-ab91-27a342e09b57" />
-   
    
 5. Error handling
    
