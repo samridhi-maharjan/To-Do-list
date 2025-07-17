@@ -1,18 +1,15 @@
-import numpy as np
-
 def main():
     print("\t\tTO-DO LIST")
     print("\tWelcome to the To-Do List app")
     print("\n")
     while True:
-        print("Please select on of the operations")
         print("1. Add Task")
         print("2. View Task List")
         print("3. Mark Task Complete")
         print("4. Remove task")
         print("5. Exit app")
         
-        choice=int(input("Press number of the desired operation"))     # get input from user
+        choice=int(input("Please select an option by entering its number:"))     # get input from user
         try:
             # compare user's input with the operation index
             if choice==1:
@@ -36,7 +33,7 @@ tasks=[]
 def addTask():
     print("Enter your task")
     taskName=input("Please enter one task at a time")
-    tasks.append({"task":taskName, "Status":"Pending"})
+    tasks.append({'task': taskName, 'Status':'Pending'})
     print(f"Task '{taskName}' added to the list.")
     print("\n")
 
@@ -47,16 +44,44 @@ def viewTask():
     else:
         print("Task lists:")
         for index, task in enumerate(tasks,1):  #goes through tasks and index starts with 1
-            print(f"{index}. {task['Task']} - {task['Status']}")
-            print("\n")
+            print(f"{index}. {task['task']} - {task['Status']}")
+    print("\n")
 
 #funtion to mark task complete
 def completeTask():
-    print("complete")
-
+    if len(tasks)==0:
+        print("List is Empty!\nAdd a Task")
+    else:
+        viewTask()
+        try:
+            searchTask=int(input("Enter the task number"))-1
+            if searchTask>=0 and searchTask<len(tasks):
+                tasks[searchTask]['Status']='done'
+                print(f"Task {tasks[searchTask]['task']} has been completed.")
+            else:
+                print("Invalid Task Number")
+            print("\n")
+        except ValueError:
+                print("Please enter a valid task number")
+        print("\n")
+#function to remove task
 def removeTask():
-    print("delete")
-
+    if len(tasks)==0:
+        print("List is Empty!\nAdd a Task")
+    else:
+        viewTask()
+        try:
+            searchTask=int(input("Enter the task number to delete"))-1
+            if searchTask>=0 and searchTask<len(tasks):
+                removeTask=tasks.pop(searchTask)
+                print(f"Task removed: {removeTask['task']}")
+            else:
+                print("Invalid Task Number")
+            print("\n")
+        except ValueError:
+                print("Please enter a valid task number")
+        print("\n")
+#function to exit
 def closeApp():
     print("quit")
 
