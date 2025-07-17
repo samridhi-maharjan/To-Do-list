@@ -2,12 +2,9 @@ import numpy as np
 
 def main():
     print("\t\tTO-DO LIST")
-    menu()
-# menu function
-def menu():
+    print("\tWelcome to the To-Do List app")
+    print("\n")
     while True:
-        print("\tWelcome to the To-Do List app")
-        print("\n")
         print("Please select on of the operations")
         print("1. Add Task")
         print("2. View Task List")
@@ -41,6 +38,7 @@ def addTask():
     taskName=input("Please enter one task at a time")
     tasks.append({"task":taskName, "Status":"Pending"})
     print(f"Task '{taskName}' added to the list.")
+    print("\n")
 
 #function to view t0-do list        
 def viewTask():
@@ -49,8 +47,10 @@ def viewTask():
     else:
         print("Task lists:")
         for index, task in enumerate(tasks,1):  #goes through tasks and index starts with 1
-            print(f"Task {index}. {task}")
+            print(f"{index}. {task['Task']} - {task['Status']}")
+            print("\n")
 
+#funtion to mark task complete
 def completeTask():
     print("complete")
 
