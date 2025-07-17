@@ -4,7 +4,7 @@ import os
 tasks = []
 
 def loadTasks():
-    # Lod tasks from the JSON file at startup
+    #loads tasks from the JSON file at start
     global tasks
     if os.path.exists("tasks.json"):
         try:
@@ -15,7 +15,7 @@ def loadTasks():
             tasks = []
 
 def saveTasks():
-    #Save current tasks to the JSON file.
+    #save current tasks to the JSON file.
     try:
         with open("tasks.json", "w", encoding="utf-8") as f:
             json.dump(tasks, f, indent=4)
@@ -34,8 +34,7 @@ def main():
         print("5. Exit app")
         
         try:
-            choice=int(input("Please select an option by entering its number:"))     # get input from user
-            # compare user's input with the operation index
+            choice=int(input("Please select an option by entering its number:"))
             if choice==1:
                 addTask()
             elif choice==2:
@@ -67,7 +66,7 @@ def viewTask():
     else:
         print("\n")
         print("Task lists:")
-        for index, task in enumerate(tasks,1):              #Loops through the tasks list with an index starting at 1
+        for index, task in enumerate(tasks,1):              #loops through the tasks list with an index starting at 1 for user-friendly numbering
             print(f"{index}. {task['task']} - {task['Status']}")
     print("\n")
 #function to mark task complete
@@ -79,7 +78,7 @@ def completeTask():
         try:
             searchTask=int(input("Enter the task number:"))-1
             if searchTask>=0 and searchTask<len(tasks):
-                tasks[searchTask]['Status']='Done'
+                tasks[searchTask]['Status']='Done'          #mark the selected task as completed
                 saveTasks()
                 print(f"Task {tasks[searchTask]['task']} has been completed.")
             else:
@@ -97,8 +96,8 @@ def removeTask():
         try:
             searchTask=int(input("Enter the task number to delete:"))-1
             if searchTask>=0 and searchTask<len(tasks):
-                removeTask=tasks.pop(searchTask)
-                print(f"Task removed: {removeTask['task']}")
+                deleteTask=tasks.pop(searchTask)
+                print(f"Task removed: {deleteTask['task']}")
             else:
                 print("Invalid Task Number")
             print("\n")

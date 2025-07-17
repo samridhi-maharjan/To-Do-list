@@ -6,5 +6,13 @@
     {
         "task": "buy pen",
         "Status": "Pending"
+    },
+    {
+        "task": "go to gym",
+        "Status": "Pending"
+    },
+    {
+        "task": "send an email",
+        "Status": "Pending"
     }
 ]
