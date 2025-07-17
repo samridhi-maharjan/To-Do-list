@@ -26,7 +26,9 @@ Task 'Buy groceries' added to the list.
 
 ## Clean code principles applied in the project
 1. Meaninginful variables and function name
-   -functions
+
+   - functions
+     
        loadTasks()
        saveTasks()
        addTask()
@@ -34,29 +36,43 @@ Task 'Buy groceries' added to the list.
        completeTask()
        removeTask()
        closeApp()
-   -variables
+     
+   - variables
+     
        taskName
        tasks = []
        searchTask
        deleteTask
+     
 3. Single Responsibility Principle
+   
    <img width="558" height="186" alt="image" src="https://github.com/user-attachments/assets/b6c1f24d-df7c-434c-8cfd-1a8e15942fb8" />
+   
    
    <img width="1407" height="232" alt="image" src="https://github.com/user-attachments/assets/7362616f-af07-4ea4-ab91-27a342e09b57" />
    
+   
    <img width="200" height="150" alt="image" src="https://github.com/user-attachments/assets/b6c1f24d-df7c-434c-8cfd-1a8e15942fb8" />
+   
    
    <img width="500" height="232" alt="image" src="https://github.com/user-attachments/assets/7362616f-af07-4ea4-ab91-27a342e09b57" />
    
-4. Error handling
+   
+5. Error handling
+   
    <img width="840" height="428" alt="image" src="https://github.com/user-attachments/assets/9f1eb2b3-53d3-4e9f-bbe5-757abd58f374" />
+   
    
    <img width="600" height="400" alt="image" src="https://github.com/user-attachments/assets/9f1eb2b3-53d3-4e9f-bbe5-757abd58f374" />
    
-6. Readability and consistency
+   
+7. Readability and consistency
+   
    <img width="862" height="698" alt="image" src="https://github.com/user-attachments/assets/87b5d778-a709-45ec-bf73-8744bc43da23" />
    
+   
    <img width="700" height="600" alt="image" src="https://github.com/user-attachments/assets/87b5d778-a709-45ec-bf73-8744bc43da23" />
+   
 
 ---
 
