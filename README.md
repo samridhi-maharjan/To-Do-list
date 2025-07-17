@@ -25,71 +25,38 @@ Please enter one task at a time: Buy groceries
 Task 'Buy groceries' added to the list.
 
 ## Clean code principles applied in the project
-1. Single Responsibility Principle
-    Each function has a single, well-defined responsibility:
-    
-    loadTasks(): Loads tasks from JSON file
-    saveTasks(): Saves tasks to JSON file
-    addTask(): Handles adding new tasks
-    viewTask(): Displays task list
-    completeTask(): Marks tasks as complete
-    removeTask(): Removes tasks from list
-
-2. Meaningful Names
-    Functions and variables have descriptive names (addTask, viewTask, taskName)
-    Constants and variables clearly indicate their purpose (tasks, searchTask)
-
-3. Error Handling
-
-Proper exception handling for file operations
-Input validation for user choices
-Graceful handling of invalid task numbers
-Protection against empty task entries
-
-4. Code Organization
-    Logical separation of concerns
-    Clear function structure
-    Consistent indentation and formatting
-    Proper use of global variables where necessary
-
-5. User Experience
-    Clear menu structure
-    Informative error messages
-    Confirmation messages for actions
-    Input validation with helpful feedback
-
-6. Data Persistence
-    Automatic saving after each modification
-    JSON format for human-readable storage
-    Graceful handling of missing or corrupted data files
-    
-    Technical Details
-    Data Structure
-    Tasks are stored as a list of dictionaries:
-    json[
-        {
-            "task": "Buy groceries",
-            "Status": "Pending"
-        },
-        {
-            "task": "Finish homework", 
-            "Status": "Done"
-        }
-    ]
-    Error Handling Examples
-    Invalid menu choice:
-    Please select an option by entering its number: 7
-    Please enter number from 1 to 5!
-    Non-numeric input:
-    Please select an option by entering its number: abc
-    Invalid input
-    Empty task:
-    Please enter one task at a time: 
-    Task cannot be empty.
-    Invalid task number:
-    Enter the task number: 99
-    Invalid Task Number
-    Requirements
+1. Meaninginful variables and function name
+   -functions
+       loadTasks()
+       saveTasks()
+       addTask()
+       viewTask()   
+       completeTask()
+       removeTask()
+       closeApp()
+   -variables
+       taskName
+       tasks = []
+       searchTask
+       deleteTask
+3. Single Responsibility Principle
+   <img width="558" height="186" alt="image" src="https://github.com/user-attachments/assets/b6c1f24d-df7c-434c-8cfd-1a8e15942fb8" />
+   
+   <img width="1407" height="232" alt="image" src="https://github.com/user-attachments/assets/7362616f-af07-4ea4-ab91-27a342e09b57" />
+   
+   <img width="200" height="150" alt="image" src="https://github.com/user-attachments/assets/b6c1f24d-df7c-434c-8cfd-1a8e15942fb8" />
+   
+   <img width="500" height="232" alt="image" src="https://github.com/user-attachments/assets/7362616f-af07-4ea4-ab91-27a342e09b57" />
+   
+4. Error handling
+   <img width="840" height="428" alt="image" src="https://github.com/user-attachments/assets/9f1eb2b3-53d3-4e9f-bbe5-757abd58f374" />
+   
+   <img width="600" height="400" alt="image" src="https://github.com/user-attachments/assets/9f1eb2b3-53d3-4e9f-bbe5-757abd58f374" />
+   
+6. Readability and consistency
+   <img width="862" height="698" alt="image" src="https://github.com/user-attachments/assets/87b5d778-a709-45ec-bf73-8744bc43da23" />
+   
+   <img width="700" height="600" alt="image" src="https://github.com/user-attachments/assets/87b5d778-a709-45ec-bf73-8744bc43da23" />
 
 ---
 
