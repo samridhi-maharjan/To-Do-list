@@ -1,23 +1,22 @@
 import numpy as np
 
-lists=[]
 def main():
-    print("TO-DO LIST")
+    print("\t\tTO-DO LIST")
     menu()
-
 # menu function
 def menu():
     while True:
+        print("\tWelcome to the To-Do List app")
+        print("\n")
+        print("Please select on of the operations")
+        print("1. Add Task")
+        print("2. View Task List")
+        print("3. Mark Task Complete")
+        print("4. Remove task")
+        print("5. Exit app")
+        
+        choice=int(input("Press number of the desired operation"))     # get input from user
         try:
-            print("Welcome to the To-Do List app")
-            print("Please select on of the operations")
-            print("1. Add Task")
-            print("2. View Task List")
-            print("3. Mark Task Complete")
-            print("4. Remove task")
-            print("5. Exit app")
-            
-            choice=int(input("Press number of the desired operation"))     # get input from user
             # compare user's input with the operation index
             if choice==1:
                 addTask()
@@ -35,17 +34,30 @@ def menu():
         except ValueError:
             print("invalid input")     #catches string error
 
+tasks=[]
+# function to add new task
 def addTask():
     print("Enter your task")
-    taskName=input("please enter one task at a time")
-    print(taskName)
+    taskName=input("Please enter one task at a time")
+    tasks.append({"task":taskName, "Status":"Pending"})
+    print(f"Task '{taskName}' added to the list.")
+
+#function to view t0-do list        
 def viewTask():
-    print("view")
+    if len(tasks)==0:
+        print("There are no pending tasks")
+    else:
+        print("Task lists:")
+        for index, task in enumerate(tasks,1):  #goes through tasks and index starts with 1
+            print(f"Task {index}. {task}")
+
 def completeTask():
     print("complete")
+
 def removeTask():
-    print("remove")
+    print("delete")
+
 def closeApp():
     print("quit")
-if __name__ == "__main__":
-    main()
+
+main()
